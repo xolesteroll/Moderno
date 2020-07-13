@@ -272,7 +272,7 @@
                 width: 16px;
                 height: 16px;
                 border-radius: 50%;
-                border: 1px solid #000;
+                border: none;
                 background-color: #e8e8e8;
                 padding: 0;
             }
@@ -325,6 +325,9 @@
             margin: 0 auto;
             margin-bottom: 30px;
             transition: all 0.3s;
+            g{
+                transition: all 0.3s;
+            }
         }
         &-title {
             margin-bottom: 25px;
@@ -361,5 +364,47 @@
 }
 
 // End Advantages
+
+//Start Author
+
+.author{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 760px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__box{
+        max-width: 650px;
+        width: 100%;
+        min-height: 215px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+        color: #ffffff;
+        padding: 71px 59px 82px 61px;
+        &-title{
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: 400;
+            margin-right: 45px;
+            max-width: 261px;
+            span{
+                @include f700;
+            }
+        }
+        &-link{
+            font-size: 18px;
+            line-height: 36px;
+            padding: 14px 40px;
+            background-color: #ffffff;
+        }
+    }
+}
+
+//End Author
 
 @import "media";
