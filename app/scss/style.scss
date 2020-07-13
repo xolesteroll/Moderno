@@ -44,9 +44,8 @@
             display: inline-block;
             a {
                 color: #fff;
-                font-family: "Roboto", sans-serif;
+                @include f500;
                 font-size: 14px;
-                font-weight: 500;
             }
             & + li {
                 margin-left: 30px;
@@ -67,17 +66,16 @@
     &__inner {
         text-align: center;
         color: #ffffff;
-        font-family: "Roboto", sans-serif;
         padding: 155px 0 100px;
         &-title {
             font-size: 48px;
-            font-weight: 700;
+            @include f700;
             margin-bottom: 10px;
             line-height: 72px;
         }
         &-text {
             font-size: 20px;
-            font-weight: 500;
+            @include f500;
             line-height: 30px;
             margin-bottom: 50px;
         }
@@ -93,14 +91,12 @@
                 border-radius: 4px;
                 border: none;
                 font-size: 14px;
-                font-family: "Roboto", sans-serif;
-                font-weight: 500;
+                @include f500;
                 padding: 0 70px 0 25px;
                 color: $text;
                 &::placeholder {
                     color: #90a4ae;
-                    font-weight: 500;
-                    font-family: "Roboto", sans-serif;
+                    @include f500;
                 }
             }
             button {
@@ -124,8 +120,7 @@
 .products {
     padding: 110px 0 110px;
     background-color: $grey-bg;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    @include f500;
     &__inner-btn {
         text-align: center;
         margin-bottom: 60px;
@@ -198,7 +193,9 @@
     &-author {
         display: flex;
         align-items: center;
-        max-width: 245px span {
+        max-width: 245px;
+        @include f500;
+        span {
             font-size: 14px;
         }
         .avatar {
@@ -248,10 +245,10 @@
 
 .product-slider {
     padding: 110px 0 120px;
-    .slick-list{
+    .slick-list {
         margin-right: -5px;
         margin-left: -5px;
-        .slick-slide{
+        .slick-slide {
             max-width: 442px;
             width: 100%;
             margin: 0 15px;
@@ -284,5 +281,85 @@
 }
 
 //End Product Slider
+
+// Start Advantages
+
+.advantages {
+    background-color: $dark-blue;
+    padding: 120px 0;
+    &__title {
+        color: #ffffff;
+        margin-bottom: 83px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 370px;
+        text-align: center;
+        padding: 0 15px;
+        cursor: pointer;
+        &:hover {
+            .advantages__item-images {
+                background-color: $green;
+            }
+            .advantages__item-title {
+                color: $green;
+            }
+            .advantages__item-images{
+                g{
+                   fill: #ffffff; 
+                }       
+            }
+        }
+
+        &-images {
+            width: 113px;
+            height: 113px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+        &-title {
+            margin-bottom: 25px;
+            color: #ffffff;
+            @include f500;
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+        &-text {
+            font-size: 15px;
+            line-height: 24px;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.icosvg-1 {
+    svg {
+        width: 61px;
+    }
+}
+
+.icosvg-2 {
+    svg {
+        width: 71px;
+        height: 70px;
+    }
+}
+
+.icosvg-3 {
+    svg {
+        width: 75px;
+    }
+}
+
+// End Advantages
 
 @import "media";
