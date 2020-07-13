@@ -307,10 +307,10 @@
             .advantages__item-title {
                 color: $green;
             }
-            .advantages__item-images{
-                g{
-                   fill: #ffffff; 
-                }       
+            .advantages__item-images {
+                g {
+                    fill: #ffffff;
+                }
             }
         }
 
@@ -325,7 +325,7 @@
             margin: 0 auto;
             margin-bottom: 30px;
             transition: all 0.3s;
-            g{
+            g {
                 transition: all 0.3s;
             }
         }
@@ -367,7 +367,7 @@
 
 //Start Author
 
-.author{
+.author {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -376,7 +376,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    &__box{
+    &__box {
         max-width: 650px;
         width: 100%;
         min-height: 215px;
@@ -386,17 +386,17 @@
         background-color: $green;
         color: #ffffff;
         padding: 71px 59px 82px 61px;
-        &-title{
+        &-title {
             font-size: 30px;
             line-height: 30px;
             font-weight: 400;
             margin-right: 45px;
             max-width: 261px;
-            span{
+            span {
                 @include f700;
             }
         }
-        &-link{
+        &-link {
             font-size: 18px;
             line-height: 36px;
             padding: 14px 40px;
@@ -406,5 +406,37 @@
 }
 
 //End Author
+
+//Start Tutorial
+
+.tutorial {
+    padding: 70px 0 120px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 370px;
+        width: 100%;
+        &-image {
+            min-height: 270px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &-name {
+            background-color: #f8f8f8;
+            padding: 38px 10px;
+            text-align: center;
+            a {
+                font-size: 24px;
+                @include f700;
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+//End Tutorial
 
 @import "media";
