@@ -6,6 +6,10 @@ html {
 *::after {
     box-sizing: inherit;
 }
+html,
+body {
+    height: 100%;
+}
 a {
     display: inline-block;
     text-decoration: none;
@@ -17,10 +21,10 @@ li {
     padding: 0;
     list-style: none;
 }
-button{
+button {
     cursor: pointer;
     border: none;
-    &:focus{
+    &:focus {
         outline: none;
     }
 }
@@ -29,6 +33,18 @@ body {
     font-size: 15px;
     line-height: 24px;
     color: $text;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
 }
 .container {
     max-width: 1200px;
@@ -40,6 +56,9 @@ body {
     margin: 0 auto;
     padding: 0 30px;
 }
+.page-content{
+    background-color: $grey-bg;
+}
 .section__title {
     text-align: center;
     color: $dark-blue;
@@ -49,7 +68,35 @@ body {
     line-height: 60px;
     margin-bottom: 35px;
 }
-.rate-star{
+.rate-star {
     display: inline-block;
     margin-right: 13px;
+}
+.breadcrumbs {
+    &__inner {
+        padding: 45px 0 40px;
+    }
+    &__list {
+        li {
+            display: inline-block;
+            position: relative;
+            a {
+                color: #b0bec5;
+            }
+            &:last-child{
+                a, span{
+                    color: $dark-blue;
+                }
+            }
+            & + li {
+                padding-left: 24px;
+                &::before {
+                    content: "-";
+                    position: absolute;
+                    left: 8px;
+                    color: $green;
+                }
+            }
+        }
+    }
 }

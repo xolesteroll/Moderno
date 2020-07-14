@@ -1,7 +1,5 @@
 $(function(){
-
-
-    var mixer = mixitup('.products__inner-box');
+    
 
     $('.rate-star').rateYo({
         rating: 5,
@@ -10,6 +8,7 @@ $(function(){
         spacing: "3px",
         readOnly: true
       });
+    
 
 
     $('.product-slider__inner').slick({
@@ -21,6 +20,6 @@ $(function(){
 
     });
 
-    
+    var mixer = mixitup('.products__inner-box');
     
 });
