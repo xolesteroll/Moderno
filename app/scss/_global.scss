@@ -56,7 +56,7 @@ body {
     margin: 0 auto;
     padding: 0 30px;
 }
-.page-content{
+.page-content {
     background-color: $grey-bg;
 }
 .section__title {
@@ -68,10 +68,13 @@ body {
     line-height: 60px;
     margin-bottom: 35px;
 }
+
 .rate-star {
     display: inline-block;
     margin-right: 13px;
+    padding: 0 0 2px 0;
 }
+
 .breadcrumbs {
     &__inner {
         padding: 45px 0 40px;
@@ -83,8 +86,9 @@ body {
             a {
                 color: #b0bec5;
             }
-            &:last-child{
-                a, span{
+            &:last-child {
+                a,
+                span {
                     color: $dark-blue;
                 }
             }
