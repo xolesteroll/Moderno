@@ -230,7 +230,6 @@
     }
 }
 
-
 .products__bottom-btn {
     text-align: center;
     button {
@@ -628,68 +627,124 @@
 .product-page {
     &__inner {
         display: flex;
+        padding-bottom: 110px;
     }
     &__aside {
         margin-right: 30px;
-        .product__item{
+        .product__item {
             margin-top: 25px;
             box-shadow: none;
             // margin-bottom: 30px;
             padding-bottom: 30px;
             border-bottom: 1px solid #dde3e8;
-            .rate-star{
+            .rate-star {
                 margin-right: 0;
             }
-            &-title{
+            &-title {
                 font-size: 16px;
                 @include f700;
             }
-            &-category{
+            &-category {
                 font-size: 14px;
                 @include f500;
             }
-            &-img{
+            &-img {
                 min-height: 120px;
             }
-            &-content{
+            &-content {
                 border: none;
                 padding: 0;
                 min-height: 75px;
-
             }
-            &-info{
+            &-info {
                 padding: 0;
                 min-height: 0;
             }
-            &-price{
+            &-price {
                 font-size: 16px;
                 @include f700;
             }
-            
-            &-rating__num{
+
+            &-rating__num {
                 display: none;
             }
-            &-author{
-                .avatar{
+            &-author {
+                .avatar {
                     margin-right: 9px;
-
                 }
             }
         }
     }
-    &__content{
-        width: 100%;
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
     }
-    &__filter{
+    &__content {
+        width: 100%;
+        .product__item{
+            background-color: #fff;
+            max-width: 270px;
+            &-img{
+                min-height: 180px;
+            }
+            &-content{
+                padding: 10px 20px;
+            }
+            &-title{
+                font-size: 16px;
+            }
+            &-info{
+                min-height: 65px;
+                padding: 10px 20px;
+            }
+            .rate-star{
+                margin-right: 5px;
+                margin-left: auto;
+            }
+            .avatar{
+                margin-right: 9px;
+            }
+        }
+    }
+    &__filter {
         background-color: #ffffff;
         border: 1px solid #d7d7d7;
         padding: 0 20px;
         margin-bottom: 30px;
         height: 60px;
-        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            background-color: transparent;
+            font-size: 16px;
+            color: #90a4ae;
+            &.active {
+                color: $green;
+            }
+            &.icon-sort-amount-desc {
+                color: #455a64;
+                &::before {
+                    font-size: 16px;
+                }
+            }
+            &.icon-unsorted {
+                color: #707070;
+                &::before {
+                    font-size: 14px;
+                }
+            }
+        }
+        &-sort {
+            font-size: 14px;
+            color: #707070;
+            display: flex;
+            align-items: center;
+        }
     }
 }
-.top-sellers__link{
+.top-sellers__link {
     color: #ffffff;
     font-size: 15px;
     @include f500;
@@ -698,8 +753,8 @@
     text-align: center;
     width: 100%;
 }
-.aside__product-items{
-    .product__item:last-child{
+.aside__product-items {
+    .product__item:last-child {
         border-bottom: none;
         padding-bottom: 0;
     }
@@ -726,11 +781,11 @@
         margin: 10px 0;
         padding-left: 20px;
         position: relative;
-        a{
+        a {
             color: $dark-blue;
         }
-        span{
-            color:#90a4ae;
+        span {
+            color: #90a4ae;
             margin-left: 10px;
         }
         &::before {
@@ -744,12 +799,12 @@
         }
     }
 }
-.price-range{
-    form{
+.price-range {
+    form {
         padding: 20px 0 0;
         text-align: center;
     }
-    button{
+    button {
         margin-top: 55px;
         background-color: $green;
         padding: 16px 10px;
@@ -758,7 +813,7 @@
         @include f500;
         width: calc(100% - 10px);
         position: relative;
-        &::before{
+        &::before {
             content: "\f002";
             color: #ffffff;
             position: absolute;
@@ -773,21 +828,21 @@
 //Start Range slider settings
 
 .irs-max,
-.irs-min{
+.irs-min {
     display: none;
 }
 
-.irs--flat .irs-line{
+.irs--flat .irs-line {
     background-color: #f2f5f8;
     height: 5px;
 }
 
-.irs--flat .irs-bar{
+.irs--flat .irs-bar {
     background-color: #37474f;
     height: 5px;
 }
 
-.irs--flat .irs-handle{
+.irs--flat .irs-handle {
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -795,21 +850,26 @@
     border: 4px solid $green;
     top: 19px;
     cursor: pointer;
-    &>i:first-child{
+    & > i:first-child {
         display: none;
     }
 }
 
-.irs-from, .irs-single, .irs-to{
+.irs-from,
+.irs-single,
+.irs-to {
     top: 45px;
-    
 }
 
-.irs--flat .irs-from:before, .irs--flat .irs-single:before, .irs--flat .irs-to:before{
+.irs--flat .irs-from:before,
+.irs--flat .irs-single:before,
+.irs--flat .irs-to:before {
     display: none;
 }
 
-.irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to {
     color: #78909c;
     font-size: 15px;
     font-weight: 400;
@@ -819,6 +879,32 @@
     padding: 0;
     background-color: transparent;
     border-radius: 0;
+}
+.pagination{
+    &__list{
+        li{
+            display: inline-block;
+            & + li{
+                margin-left: 6px;
+            }
+            a, span{
+                box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+                width: 43px;
+                height: 38px;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                color: $dark-blue;
+                @include f500;
+                &.active{
+                    background-color: $red;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
 }
 
 //End Range slider settings
