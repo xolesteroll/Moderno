@@ -88,6 +88,7 @@
         transform: translate(-50%, -50%);
         color: #a0a0a0;
         font-size: 14px;
+        transition: all 0.3s;
     }
     & + .header__circle {
         margin-left: 15px;
@@ -108,6 +109,7 @@
     }
 }
 .basket {
+    margin-right: 20px;
     span {
         background-color: $green;
     }
@@ -115,14 +117,11 @@
 .header__btn-login--off {
     display: none;
 }
-.header__btn-logout {
-    display: none;
-    &.header__btn-logout--on {
-        display: block;
-    }
+.header__btn-login--on {
+    display: block;
 }
+
 .user {
-    margin-left: 20px;
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -168,6 +167,7 @@
                 border-width: 1px;
                 padding: 20px;
                 overflow: auto;
+                z-index: 2;
             }
         }
     }
@@ -191,44 +191,58 @@
         }
     }
 }
-.basket__box {
-    position: relative;
-    height: 90px;
-    margin-top: 56px;
-    margin-left: 15px;
-    &:hover {
-        .basket__menu {
-            height: auto;
-            border-width: 1px;
-            overflow: auto;
-        }
-    }
-}
-.basket__menu {
+.circle__menu {
     border: 0px solid #cccccc;
     background-color: #ffffff;
     position: absolute;
     top: 62px;
     right: -19px;
     width: 268px;
-    transition: all 0.3s;
     height: 0;
     overflow: hidden;
+    z-index: 2;
+    
 }
-.basket__item{
-    padding: 23px;
+.basket__box,
+.message__box,
+.notification__box {
+    position: relative;
+    height: 90px;
+    margin-top: 56px;
+    margin-left: 15px;
+    &:hover {
+        .circle__menu {
+            height: auto;
+            border-width: 1px;
+            overflow: auto;
+        }
+        .circle__item{
+            padding: 23px;
+            border-width: 1px;
+        }
+        .header__circle{
+            &::before{
+                color: $dark-blue;
+            }
+        }
+    }
+}
+.notification__box {
+    margin-left: 0;
+}
+.circle__item{
+    padding: 0 23px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 0px solid #e0e0e0;
+    transition: all 0.3s;
 }
-.basket__images{
-    width: 73px;
-    min-height: 57px;
+.circle__images{
     margin-right: 15px;
 }
-.basket__info{
+.circle__info{
     &-name{
-        color: #263238;
+        color: $dark-blue;
         font-size: 15px;
         line-height: 15px;
         @include f700;
@@ -246,6 +260,71 @@
         font-size: 16px;
         @include f500;
         line-height: 16px;
+    }
+    &-date{
+        font-size: 10px;
+        color: #707070;
+        line-height: 10px;
+    }
+}
+.basket__summ{
+    padding: 16px 17px 12px;
+    &-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 13px;
+        padding-right: 22px;
+        @include f700;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: $dark-blue;
+    }
+}
+.basket__btn{
+    color: #ffffff;
+    @include f700;
+    font-size: 14px;
+    padding: 10px 5px;
+    background-color: $green;
+    text-align: center;
+    width: 100px;
+    &-checkout{
+        width: 120px;
+        margin-left: 6px;
+        background-color: $red;
+    }
+}
+.notification__menu,
+.message__menu{
+    .circle__images{
+        margin-right: 20px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    .circle__info-name{
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .circle__info-theme{
+        font-size: 11px;
+        line-height: 11px;
+    }
+    .circle__item{
+        position: relative;
+        &::before{
+            position: absolute;
+            right: 28px;
+            top: 27px;
+            font-size: 16px;
+            color: #b0bec5;
+        }
+        &.icon-color{
+            &::before{
+                color: $tomato;
+            }
+        }
     }
 }
 // End Header

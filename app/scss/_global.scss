@@ -33,6 +33,7 @@ body {
     font-size: 15px;
     line-height: 24px;
     color: $text;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -58,6 +59,36 @@ body {
 }
 .page-content {
     background-color: $grey-bg;
+}
+.menu__btn{
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    div{
+        background-color: #fff;
+        height: 3px;
+        & + div{
+            margin-top: 5px;
+        }
+    }
+}
+.header__btn-menu{
+    display: none;
+    width: 70px;
+    height: 70px;
+    background-color: $dark-blue;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    &::before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 36px;
+        color: #ffffff;
+    }
 }
 .section__title {
     text-align: center;
