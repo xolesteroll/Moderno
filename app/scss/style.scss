@@ -1768,4 +1768,217 @@
 
 // End About Page
 
+// Start Contact Page
+
+.contact{
+    &__wrapper{
+        border: 1px solid #dcdcdc;
+        background-color: #ffffff;
+        margin-bottom: 150px;
+    }
+    &__head{
+        font-size: 24px;
+        color: #444444;
+        padding: 23px 40px;
+        @include f500;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    &__inner{
+        padding: 35px 40px 15px;
+    }
+    &__map{
+        margin-bottom: 50px;
+        min-height: 415px;
+        iframe{
+            width: 100%;
+            height: 415px;
+        }
+    }
+    &__box{
+        display: flex;
+    }
+    &__info{
+        margin-right: 30px;
+        max-width: 330px;
+        width: 100%;
+        &-item{
+            margin-bottom: 30px;
+        }
+        &-title{
+            padding-bottom: 20px;
+            position: relative;
+            font-size: 20px;
+            @include f500;
+            color: $dark-blue;
+            padding-left: 40px;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif !important;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 44px;
+                height: 4px;
+                background-color: $green;
+                left: 40px;
+                bottom: 0;
+            }
+            &::before{
+                color: $green;
+                font-size: 24px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-family: 'icomoon';
+            }
+        }
+        &-content{
+            padding-left: 40px;
+            color: #707070;
+            max-width: 270px;
+        }
+    }
+    &__form{
+        width: 100%;
+        input{
+            border: none;
+            height: 43px;
+            padding-left: 17px;
+            padding-right: 17px;
+            background-color: #f1f4f5;
+            max-width: 350px;
+            width: 100%;
+            &::placeholder{
+                color: #7a7a7a;
+                font-size: 15px;
+            }
+        }
+        textarea{
+            border: none;
+            background-color: #f1f4f5;
+            padding: 13px 17px;
+            width: 100%;
+            height: 192px;
+            display: block;
+            resize: none;
+            margin-bottom: 23px;
+            &::placeholder{
+                color: #7a7a7a;
+                font-size: 15px;
+            }
+        }
+        button{
+            text-transform: uppercase;
+            font-size: 16px;
+            background-color: $green;
+            @include f700;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 5px;
+            width: 190px;
+        }
+        &-row{
+            margin-bottom: 30px;
+        }
+        &-title{
+            font-size: 24px;
+            @include f500;
+            margin-bottom: 16px;
+            color: #333333;
+        }
+        &-row{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+// End Contact Page
+
+// Start Settings PAge
+
+.settings{
+    padding-bottom: 100px;
+    &__line{
+        margin-bottom: 21px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        label{
+            width: 260px;
+            color: #444444;
+        }
+        input,
+        select{
+            max-width: 540px;
+            width: 100%;
+            border: 1px solid #dedede;
+            height: 40px;
+            color: #000000;
+            background-color: #f9f9f9;
+            padding: 5px 15px;
+        }
+        
+    }
+}
+
+.product-one__tabs.settings__tabs{
+    display: flex;
+    .tabs{
+        max-width: 270px;
+        width: 100%;
+        margin-right: 30px;
+        border: 1px solid #dedede;
+        border-bottom: none;
+        display: block;
+        height: 100%;
+        span{
+            display: block;
+            background-color: #fff;
+            border: none;
+            border-bottom: 1px solid #dedede;
+            padding: 17px 17px 17px 50px;
+            text-align: left;
+            @include f500;
+            color: #707070;
+            &.active{
+                border-bottom: 2px solid $green;
+                color: #37474f;
+                &::before{
+                    color: $green;
+                }
+            }
+            &::before{
+                left: 24px;
+                top: 15px;
+                color: #444444;
+                font-size: 14px; 
+            }
+        }
+    }
+    .tab_content{
+        width: 100%;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+    }
+    .page-box{
+        background-color: #fff;
+        button{
+            margin-left: 260px;
+        }
+        &__title{
+            border: 1px solid #dedede;
+            padding: 18px 34px;
+            @include f500;
+            font-size: 24px;
+            color: $dark-blue;
+        }
+        &__content{
+            padding: 30px 35px 80px;
+        }
+    }
+}
+
+// End Settings PAge
+
+
 @import "media";
