@@ -336,6 +336,7 @@
     width: 100%;
     padding-top: 90px;
     padding-bottom: 100px;
+    display: none;
 }
 .login__title {
     text-align: center;
@@ -1987,7 +1988,7 @@
 // Start Profile Page
 
 .profile {
-    &__inner{
+    &__inner {
         display: flex;
         margin-bottom: 30px;
     }
@@ -1998,7 +1999,7 @@
         border: 1px solid #d6d6d6;
         position: relative;
         font-size: 13px;
-        &::before{
+        &::before {
             content: "";
             position: absolute;
             width: 9px;
@@ -2008,26 +2009,26 @@
             top: 12px;
         }
     }
-    .author__name{
+    .author__name {
         margin-bottom: 2px;
     }
-    &-on{
-        &::before{
+    &-on {
+        &::before {
             background-color: $green;
         }
     }
-    &-off{
-        &::before{
+    &-off {
+        &::before {
             background-color: $red;
         }
     }
-    &__aside{
+    &__aside {
         max-width: 270px;
         margin-right: 30px;
-        &-btn{
+        &-btn {
             margin-bottom: 13px;
         }
-        &-message{
+        &-message {
             margin-bottom: 17px;
             display: block;
             width: 100%;
@@ -2039,17 +2040,17 @@
             padding: 18px 10px;
             position: relative;
             box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
-            &::before{
+            &::before {
                 position: absolute;
                 content: "\f003";
                 color: #ffffff;
                 font-size: 16px;
                 left: 55px;
                 top: 17px;
-                font-family: 'icomoon';
+                font-family: "icomoon";
             }
         }
-        &-follow{
+        &-follow {
             margin-bottom: 17px;
             display: block;
             width: 100%;
@@ -2076,15 +2077,15 @@
             background-image: url(../images/css_sprites.png);
         }
     }
-    &__content{
+    &__content {
         width: 100%;
     }
-    &__banner{
+    &__banner {
         padding: 20px;
         border: 1px solid #dedede;
         background-color: #fff;
         margin-bottom: 30px;
-        &-image{
+        &-image {
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -2092,19 +2093,19 @@
             width: 100%;
         }
     }
-    .product__item-rating{
+    .product__item-rating {
         color: $text;
         font-size: 12px;
         display: flex;
         justify-content: center;
-        span{
+        span {
             color: $dark-blue;
         }
     }
-    &__items{
+    &__items {
         display: flex;
     }
-    &__item{
+    &__item {
         width: 25%;
         background-color: #ffffff;
         text-align: center;
@@ -2112,61 +2113,61 @@
         padding: 18px 5px 15px;
         font-size: 14px;
         @include f500;
-        & + .profile__item{
+        & + .profile__item {
             border-left: none;
         }
-        &-title{
+        &-title {
             color: $dark-blue;
         }
-        &-info{
+        &-info {
             color: #707070;
-            &.profile__sales{
+            &.profile__sales {
                 color: $dark-blue;
             }
         }
     }
-    &-box{
+    &-box {
         background-color: #ffffff;
         padding: 35px 40px 25px;
         border: 1px solid #dedede;
-        &__title{
+        &__title {
             margin-bottom: 25px;
             @include f700;
             color: $dark-blue;
             font-size: 20px;
-            &.items-title{
+            &.items-title {
                 margin-bottom: 20px;
             }
         }
-        &__text{
+        &__text {
             margin-bottom: 20px;
-            p{
-              color: #707070;  
+            p {
+                color: #707070;
             }
         }
-        &__item{
-            &-head{
+        &__item {
+            &-head {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 16px;
             }
-            &-name{
+            &-name {
                 font-size: 16px;
                 @include f500;
                 color: $dark-blue;
                 font-style: italic;
             }
-            &-number{
+            &-number {
                 font-size: 16px;
                 @include f700;
                 color: $dark-blue;
             }
-            &-line{
+            &-line {
                 height: 15px;
                 background-color: #f4f4f4;
                 border-radius: 4px;
                 margin-bottom: 23px;
-                span{
+                span {
                     display: block;
                     border-radius: 4px;
                     height: 15px;
@@ -2175,28 +2176,27 @@
             }
         }
     }
-    
 }
 
-.settings.profile-settings{
-    .product-one__tabs.settings__tabs{
-        .tabs .tab{
-            font-family: 'Roboto', sans-serif !important;
+.settings.profile-settings {
+    .product-one__tabs.settings__tabs {
+        .tabs .tab {
+            font-family: "Roboto", sans-serif !important;
             font-weight: 500;
             position: relative;
-            &.active{
-                &::before{
+            &.active {
+                &::before {
                     color: $green;
                 }
             }
-            &::before{
+            &::before {
                 position: absolute;
                 font-weight: 500;
                 color: #d0d0d0;
                 left: 25px;
                 top: 17px;
                 font-size: 14px;
-                font-family: 'icomoon';
+                font-family: "icomoon";
             }
         }
     }
@@ -2206,13 +2206,13 @@
 
 //Start Upload PAge
 
-.upload{
-    &__inner{
+.upload {
+    &__inner {
         width: 100%;
         background-color: #ffffff;
         border: 1px solid #d7d7d7;
         margin-bottom: 110px;
-        &-title{
+        &-title {
             padding: 16px 35px 18px;
             @include f500;
             font-size: 24px;
@@ -2220,38 +2220,38 @@
             border-bottom: 1px solid #d7d7d7;
             margin-bottom: 40px;
         }
-        &-content{
+        &-content {
             margin-bottom: 30px;
             padding-left: 45px;
             padding-right: 50px;
         }
-        .upload-line{
+        .upload-line {
             margin-bottom: 25px;
             display: flex;
-            label{
+            label {
                 min-width: 175px;
                 padding-right: 15px;
                 color: #444444;
                 padding-top: 5px;
-                span{
+                span {
                     color: $green;
                     font-size: 24px;
                 }
             }
             select,
             input,
-            textarea{
+            textarea {
                 width: 100%;
                 display: block;
                 border: 1px solid #d7d7d7;
                 height: 40px;
                 background-color: #f9f9f9;
                 padding: 0 18px;
-                &::placeholder{
+                &::placeholder {
                     color: #707070;
                 }
             }
-            textarea{
+            textarea {
                 resize: none;
                 height: 150px;
                 padding: 8px 18px;
@@ -2275,14 +2275,14 @@
                 border-radius: 0;
                 background: transparent;
                 box-shadow: none;
-                font: 14px/32px Arial,sans-serif;
+                font: 14px/32px Arial, sans-serif;
                 font-size: 12px;
                 color: #707070;
                 display: flex;
                 align-items: center;
                 margin-left: 130px;
             }
-            #file-upload-button{
+            #file-upload-button {
                 cursor: pointer;
             }
             .jq-file__browse {
@@ -2294,7 +2294,7 @@
                 border: 1px solid #d7d7d7;
                 border-radius: 0;
                 background: #fff;
-                font: 14px/32px Arial,sans-serif;
+                font: 14px/32px Arial, sans-serif;
                 font-size: 12px;
                 line-height: 26px;
                 color: #444444;
@@ -2302,7 +2302,7 @@
                 text-shadow: none;
                 cursor: pointer;
             }
-            .jq-selectbox{
+            .jq-selectbox {
                 width: 100%;
             }
             .jq-selectbox__select {
@@ -2312,23 +2312,23 @@
                 border-bottom-color: #d7d7d7;
                 border-radius: 0;
                 background: #f9f9f9;
-                font-family: 'Roboto-Regular', sans-serif;
+                font-family: "Roboto-Regular", sans-serif;
                 line-height: 38px;
                 color: #707070;
                 box-shadow: none;
                 text-shadow: none;
             }
-            .jq-selectbox__select-text{
+            .jq-selectbox__select-text {
                 width: 100%;
             }
             .jq-selectbox__trigger {
                 border-left: none;
                 line-height: 40px;
             }
-            .jq-selectbox__trigger-arrow{
+            .jq-selectbox__trigger-arrow {
                 border: none;
-                &::before{
-                    font-family: 'icomoon';
+                &::before {
+                    font-family: "icomoon";
                     position: absolute;
                     content: "\f0d7";
                     font-size: 15px;
@@ -2336,9 +2336,8 @@
                     top: -13px;
                 }
             }
-            
         }
-        button{
+        button {
             color: #fff;
             background-color: $green;
             padding: 15px 36px;
@@ -2349,5 +2348,144 @@
 }
 
 //End Upload PAge
+
+// Start withdrawals page
+
+.withdrawals {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 110px;
+    }
+    &__col {
+        max-width: 570px;
+        width: 100%;
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+        height: 100%;
+    }
+    &__title {
+        @include f500;
+        font-size: 24px;
+        padding: 20px 32px 22px;
+        border-bottom: 1px solid #d7d7d7;
+        margin-bottom: 30px;
+        color: $dark-blue;
+    }
+    &__content {
+        padding-left: 35px;
+        padding-right: 40px;
+        &-items{
+            margin-bottom: 35px;
+        }
+        &-item{
+            display: flex;
+            justify-content: space-between;
+            height: 42px;
+            align-items: center;
+            font-size: 13px;
+            &:nth-child(odd){
+                background-color: #f9f9f9;
+            }
+        }
+        &-date{
+            width: 154px;
+            padding-left: 20px;
+            text-align: left;
+            @include f500;
+            color: #444444;
+        }
+        &-mail{
+            width: 177px;
+            text-align: left;
+        }
+        &-price{
+            width: 70px;
+            text-align: left;
+            @include f700;
+            color: #444444;
+        }
+        &-status{
+            color: #444444;
+            width: 88px;
+            text-align: left;
+            @include f700;
+            &.paid{
+                color: $green;
+            }
+        }
+    }
+    &__form-line {
+        margin-bottom: 25px;
+        label {
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            @include f500;
+            margin-bottom: 15px;
+            color: $dark-blue;
+            span {
+                color: $green;
+                font-size: 24px;
+                padding-left: 2px;
+            }
+        }
+        input {
+            width: 100%;
+            display: block;
+            border: 1px solid #d7d7d7;
+            height: 40px;
+            background-color: #f9f9f9;
+            padding: 0 18px;
+            &::placeholder {
+                color: #707070;
+            }
+        }
+        .jq-selectbox {
+            width: 100%;
+        }
+        .jq-selectbox__select {
+            height: 40px;
+            padding: 0 18px;
+            border: 1px solid #d7d7d7;
+            border-bottom-color: #d7d7d7;
+            border-radius: 0;
+            background: #f9f9f9;
+            font-family: "Roboto-Regular", sans-serif;
+            line-height: 38px;
+            color: #707070;
+            box-shadow: none;
+            text-shadow: none;
+        }
+        .jq-selectbox__select-text {
+            width: 100%;
+        }
+        .jq-selectbox__trigger {
+            border-left: none;
+            line-height: 40px;
+        }
+        .jq-selectbox__trigger-arrow {
+            border: none;
+            &::before {
+                font-family: "icomoon";
+                position: absolute;
+                content: "\f0d7";
+                font-size: 15px;
+                right: 0;
+                top: -13px;
+            }
+        }
+    }
+    &__btn {
+        margin-bottom: 50px;
+        color: #ffffff;
+        background-color: $green;
+        padding: 18px 30px;
+        font-size: 16px;
+        @include f700;
+    }
+}
+
+// End withdrawals page
 
 @import "media";
